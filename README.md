@@ -1,7 +1,7 @@
 # docker-clair
 
-A simple container that creating the Clair configuration file `/etc/clair/config.yaml` from
-enviroment settings and waits for the PostgreSQL server to be up before Clair is started.
+A simple container creating the Clair configuration file `/etc/clair/config.yaml` from
+enviroment settings on the fly and waiting for the PostgreSQL server to be up before Clair is started.
 
 Both aspects (implemented using [dockerize](https://github.com/jwilder/dockerize)) come in handy 
 when the container is used in a CI context (e.g. GitLab-CI) where
