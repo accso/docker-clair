@@ -1,6 +1,11 @@
 FROM  quay.io/coreos/clair:v2.0.1
 MAINTAINER marcus.rickert@accso.de
 
+ENV POSTGRESQL_HOSTNAME=postgres
+ENV POSTGRESQL_USERNAME=postgres
+ENV POSTGRESQL_PORT=5432
+ENV POSTGRESQL_TIMEOUT=10
+
 RUN apk update && \
     apk add openssl
 
