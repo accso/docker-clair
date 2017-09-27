@@ -22,6 +22,6 @@ if [[ ${POSTGRESQL_WAIT} -gt 0 ]] ; then
 fi
 if [[ ${POSTGRESQL_TIMEOUT} -gt 0 ]] ; then
     echo "Waiting for PostgreSQL server ${POSTGRESQL_HOSTNAME}:${POSTGRESQL_PORT} to come up..."
-    TIMEOUT_PARAM="-wait tcp://${POSTGRESQL_HOSTNAME}:${POSTGRESQL_PORT}"
+    TIMEOUT_PARAM="-wait tcp://${POSTGRESQL_HOSTNAME}:${POSTGRESQL_PORT} -timeout ${POSTGRESQL_TIMEOUT}s"
 fi 
 /usr/local/bin/dockerize ${TIMEOUT_PARAM} /clair
