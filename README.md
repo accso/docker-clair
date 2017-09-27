@@ -11,6 +11,7 @@ The container requires the following variables to be passed as environment setti
 * `POSTGRESQL_HOSTNAME`: defaults to `postgres`
 * `POSTGRESQL_USERNAME`: defaults to `postgres`
 * `POSTGRESQL_PORT`: defaults to `5432`
+* `POSTGRESQL_WAIT`: defaults to `0` (time in seconds before the script tries to start Clair)
 * `POSTGRESQL_TIMEOUT`: defaults to `10` (time in seconds before dockerize gives up on PostgreSQL)
 * `PGPASSWORD`: no default
 
