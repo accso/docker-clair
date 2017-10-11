@@ -68,7 +68,7 @@ clair:
   updater:
     # Frequency the database will be updated with vulnerabilities from the default data sources
     # The value 0 disables the updater entirely.
-    interval: 2h
+    interval: {{ .Env.CLAIR_UPDATE_INTERVAL }}h
     enabledupdaters: 
       - debian
       - ubuntu
@@ -81,7 +81,7 @@ clair:
     attempts: 3
 
     # Duration before a failed notification is retried
-    renotifyinterval: {{ .Env.CLAIR_UPDATE_INTERVAL }}h
+    renotifyinterval: 2h
 
     http:
       # Optional endpoint that will receive notifications via POST requests
