@@ -6,8 +6,10 @@ ENV POSTGRESQL_USERNAME=postgres
 ENV POSTGRESQL_PORT=5432
 ENV POSTGRESQL_TIMEOUT=10
 ENV POSTGRESQL_WAIT=0
+ENV CLAIR_UPDATE_INTERVAL=24
 
-RUN apk update && \
+RUN mkdir -p /tmp/scan && \
+    apk update && \
     apk add openssl
 
 # Installiere dockerize

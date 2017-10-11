@@ -5,6 +5,7 @@ echo "POSTGRESQL_HOSTNAME: ${POSTGRESQL_HOSTNAME}"
 echo "POSTGRESQL_PORT: ${POSTGRESQL_PORT}"
 echo "POSTGRESQL_TIMEOUT: ${POSTGRESQL_TIMEOUT} [seconds]"
 echo "POSTGRESQL_WAIT: ${POSTGRESQL_WAIT} [seconds]"
+echo "CLAIR_UPDATE_INTERVAL: ${CLAIR_UPDATE_INTERVAL} [hours] Note: 0 deactivates updating altogether"
 
 echo "Generating configuration file from template..."
 mkdir -p /etc/clair

@@ -81,7 +81,7 @@ clair:
     attempts: 3
 
     # Duration before a failed notification is retried
-    renotifyinterval: 2h
+    renotifyinterval: {{ .Env.CLAIR_UPDATE_INTERVAL }}h
 
     http:
       # Optional endpoint that will receive notifications via POST requests
